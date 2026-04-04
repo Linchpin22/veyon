@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Pixora',
+  title: 'BlackGiraffe',
   description:
     'A social media analytics tool that provides insights into brand performance and audience engagement.',
 
@@ -21,18 +21,18 @@ export const metadata = {
   },
 
   openGraph: {
-    title: 'BrandBuzz',
+    title: 'BlackGiraffe',
     description:
       'A social media analytics tool that provides insights into brand performance and audience engagement.',
     url: '#',
     type: 'website',
-    siteName: 'BrandBuzz',
+    siteName: 'BlackGiraffe',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'BrandBuzz',
+        alt: 'BlackGiraffe',
       },
     ],
   },
@@ -40,8 +40,8 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: '/brandbuzz.png', sizes: '32x32', type: 'image/png' },
-      { url: '/brandbuzz.png', sizes: '16x16', type: 'image/png' },
+      { url: '/blackgiraffe.png', sizes: '32x32', type: 'image/png' },
+      { url: '/blackgiraffe.png', sizes: '16x16', type: 'image/png' },
     ],
     apple: '/apple-touch-icon.png',
   },

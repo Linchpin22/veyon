@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {
@@ -84,13 +85,13 @@ export default function HeroSection() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-6">
-          <button className="px-10 py-4 bg-yellow-400 text-black font-black rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-400/20">
+          <Link href="/pricing" className="px-10 py-4 bg-yellow-400 text-black font-black rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-400/20">
             Get Started
-          </button>
+          </Link>
 
-          <button className="px-10 py-4 bg-white/5 border border-white/10 backdrop-blur-md text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300">
+          <Link href="/portfolio" className="px-10 py-4 bg-white/5 border border-white/10 backdrop-blur-md text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300">
             View Portfolio
-          </button>
+          </Link>
         </div>
 
         {/* Floating Card */}

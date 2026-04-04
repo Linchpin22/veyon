@@ -14,8 +14,8 @@ export default function TermsAndCondition() {
             </h1>
 
             <p className="text-gray-400 text-lg max-w-2xl">
-              These terms govern your access to and use of Pixora's digital
-              services and platform.
+              These terms govern your access to and use of BlackGiraffe's
+              digital services and platform.
             </p>
           </header>
 
@@ -23,20 +23,17 @@ export default function TermsAndCondition() {
           <div className="space-y-16">
             {/* Acceptance */}
             <section>
-              <h2 className="text-2xl font-bold mb-6">
-                Acceptance of Terms
-              </h2>
+              <h2 className="text-2xl font-bold mb-6">Acceptance of Terms</h2>
               <p className="text-gray-400">
-                By engaging Pixora Digital for any digital service, consulting,
-                or platform access, you agree to these Terms and Conditions.
+                By engaging BlackGiraffe Digital for any digital service,
+                consulting, or platform access, you agree to these Terms and
+                Conditions.
               </p>
             </section>
 
             {/* Scope */}
             <section>
-              <h2 className="text-2xl font-bold mb-6">
-                Scope of Services
-              </h2>
+              <h2 className="text-2xl font-bold mb-6">Scope of Services</h2>
 
               <ul className="space-y-3 text-gray-400">
                 <li>• Digital product development</li>
@@ -48,22 +45,18 @@ export default function TermsAndCondition() {
 
             {/* IP */}
             <section>
-              <h2 className="text-2xl font-bold mb-6">
-                Intellectual Property
-              </h2>
+              <h2 className="text-2xl font-bold mb-6">Intellectual Property</h2>
 
               <p className="text-gray-400">
                 All deliverables created for the client become the property of
-                the client after full payment. Pixora retains ownership of all
-                frameworks, systems, and internal tools used.
+                the client after full payment. BlackGiraffe retains ownership of
+                all frameworks, systems, and internal tools used.
               </p>
             </section>
 
             {/* Payments */}
             <section>
-              <h2 className="text-2xl font-bold mb-6">
-                Payment & Billing
-              </h2>
+              <h2 className="text-2xl font-bold mb-6">Payment & Billing</h2>
 
               <ul className="space-y-3 text-gray-400">
                 <li>• Net-15 payment terms</li>
@@ -79,8 +72,9 @@ export default function TermsAndCondition() {
               </h2>
 
               <p className="text-gray-400">
-                Pixora shall not be liable for indirect or consequential damages.
-                Liability is limited to the total amount paid by the client.
+                BlackGiraffe shall not be liable for indirect or consequential
+                damages. Liability is limited to the total amount paid by the
+                client.
               </p>
             </section>
           </div>
@@ -96,7 +90,7 @@ export default function TermsAndCondition() {
             </p>
 
             <a
-              href="mailto:legal@pixora.digital"
+              href="mailto:legal@BlackGiraffe.digital"
               className="bg-black text-white px-8 py-3 rounded-full font-bold inline-block"
             >
               Contact Legal Team

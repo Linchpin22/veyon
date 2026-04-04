@@ -1,7 +1,6 @@
 export default function Disclaimer() {
   return (
     <div className="bg-[#0e0e0e] text-white">
-
       <main className="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
         {/* Header */}
         <header className="mb-20">
@@ -23,13 +22,11 @@ export default function Disclaimer() {
         <section className="space-y-12">
           {/* Liability */}
           <div className="bg-[#131313] p-8 rounded-xl">
-            <h2 className="text-2xl font-bold mb-4">
-              Information Liability
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Information Liability</h2>
 
             <p className="text-gray-400 mb-4">
-              All materials and services provided are for informational
-              purposes only. We do not guarantee accuracy or completeness.
+              All materials and services provided are for informational purposes
+              only. We do not guarantee accuracy or completeness.
             </p>
 
             <p className="text-gray-400">
@@ -39,9 +36,7 @@ export default function Disclaimer() {
 
           {/* External Links */}
           <div className="border border-white/10 p-8 rounded-xl">
-            <h2 className="text-2xl font-bold mb-4">
-              External Assets
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">External Assets</h2>
 
             <p className="text-gray-400">
               This website may include links to external websites. We are not
@@ -51,9 +46,7 @@ export default function Disclaimer() {
 
           {/* Advice */}
           <div className="bg-[#262626] p-8 rounded-xl">
-            <h2 className="text-2xl font-bold mb-4">
-              Professional Advice
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Professional Advice</h2>
 
             <p className="text-gray-400 italic">
               The information on this website is not a substitute for legal,
@@ -63,21 +56,17 @@ export default function Disclaimer() {
 
           {/* IP */}
           <div className="bg-[#131313] p-8 rounded-xl">
-            <h2 className="text-2xl font-bold mb-4">
-              Intellectual Property
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Intellectual Property</h2>
 
             <p className="text-gray-400">
-              All assets, designs, and code belong to Pixora unless otherwise
-              stated. Unauthorized reproduction is prohibited.
+              All assets, designs, and code belong to BlackGiraffe unless
+              otherwise stated. Unauthorized reproduction is prohibited.
             </p>
           </div>
 
           {/* Errors */}
           <div className="bg-[#131313] p-8 rounded-xl">
-            <h2 className="text-2xl font-bold mb-4">
-              Errors and Omissions
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Errors and Omissions</h2>
 
             <p className="text-gray-400 mb-4">
               Information is provided "as is" with no warranties.
@@ -102,15 +91,13 @@ export default function Disclaimer() {
           </p>
 
           <a
-            href="mailto:legal@pixora.com"
+            href="mailto:legal@BlackGiraffe.com"
             className="text-[#e3f700] font-bold"
           >
-            legal@pixora.com
+            legal@BlackGiraffe.com
           </a>
         </footer>
       </main>
-
-
     </div>
   );
 }

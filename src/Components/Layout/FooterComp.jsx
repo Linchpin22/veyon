@@ -12,6 +12,7 @@ import {
 } from "react-icons/hi";
 import { Constant } from "@/Data/Constant";
 import Link from "next/link";
+import { formatPhone } from "../../../public/js/helpers";
 
 export default function FooterComp() {
   return (
@@ -24,7 +25,6 @@ export default function FooterComp() {
 
       <div className="relative z-10 w-full pt-16 sm:pt-20 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-5 sm:px-8 max-w-7xl mx-auto items-start">
-
           {/* Left Column — spans full width on mobile, half on sm, 1/3 on lg */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-7">
             <div className="flex flex-col gap-3">
@@ -44,11 +44,31 @@ export default function FooterComp() {
             {/* Social Icons */}
             <div className="flex flex-wrap gap-3">
               {[
-                { href: Constant.Company.instagram, icon: <FaInstagram />, label: "Instagram" },
-                { href: Constant.Company.linkedin, icon: <FaLinkedin />, label: "LinkedIn" },
-                { href: `https://wa.me/${Constant.Company.whatsapp}`, icon: <FaWhatsapp />, label: "WhatsApp" },
-                { href: `mailto:${Constant.Company.email}`, icon: <FaEnvelope />, label: "Email" },
-                { href: `tel:${Constant.Company.phone}`, icon: <FaPhoneAlt />, label: "Phone" },
+                {
+                  href: Constant.Company.instagram,
+                  icon: <FaInstagram />,
+                  label: "Instagram",
+                },
+                {
+                  href: Constant.Company.linkedin,
+                  icon: <FaLinkedin />,
+                  label: "LinkedIn",
+                },
+                {
+                  href: `https://wa.me/${Constant.Company.whatsapp}`,
+                  icon: <FaWhatsapp />,
+                  label: "WhatsApp",
+                },
+                {
+                  href: `mailto:${Constant.Company.email}`,
+                  icon: <FaEnvelope />,
+                  label: "Email",
+                },
+                {
+                  href: `tel:${Constant.Company.phones[0]}`,
+                  icon: <FaPhoneAlt />,
+                  label: "Phone",
+                },
               ].map(({ href, icon, label }) => (
                 <a
                   key={label}
@@ -119,16 +139,21 @@ export default function FooterComp() {
                 <div className="mt-0.5 w-8 h-8 shrink-0 rounded-sm bg-[#262626] flex items-center justify-center text-yellow-400 group-hover:bg-yellow-400 group-hover:text-black transition-colors">
                   <HiOutlinePhone />
                 </div>
+
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase tracking-widest text-white/40 font-bold">
                     Call us
                   </span>
-                  <a
-                    href={`tel:${Constant.Company.phone}`}
-                    className="text-white hover:text-yellow-400 transition-colors text-sm"
-                  >
-                    {Constant.Company.phone}
-                  </a>
+
+                  {Constant.Company.phones.map((phone, i) => (
+                    <a
+                      key={i}
+                      href={`tel:${phone}`}
+                      className="text-white hover:text-yellow-400 transition-colors text-sm"
+                    >
+                      {formatPhone(phone)}
+                    </a>
+                  ))}
                 </div>
               </div>
 

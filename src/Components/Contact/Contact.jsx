@@ -3,7 +3,6 @@ import { FiArrowRight, FiMessageCircle } from "react-icons/fi";
 export default function Contact() {
   return (
     <div className="bg-[#0e0e0e] text-white">
-
       <main className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         {/* Hero */}
         <header className="mb-20">
@@ -71,7 +70,7 @@ export default function Contact() {
 
                 <div>
                   <p className="text-white font-bold">Email</p>
-                  <p>hello@pixora.digital</p>
+                  <p>hello@BlackGiraffe.digital</p>
                 </div>
 
                 <div>
@@ -82,38 +81,28 @@ export default function Contact() {
             </section>
 
             <section className="bg-[#131313] p-8 rounded-xl">
-              <h3 className="text-xl font-bold mb-4">
-                Company Stats
-              </h3>
+              <h3 className="text-xl font-bold mb-4">Company Stats</h3>
 
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold">98%</div>
-                  <div className="text-xs text-gray-400">
-                    Retention
-                  </div>
+                  <div className="text-xs text-gray-400">Retention</div>
                 </div>
 
                 <div>
                   <div className="text-2xl font-bold">150+</div>
-                  <div className="text-xs text-gray-400">
-                    Projects
-                  </div>
+                  <div className="text-xs text-gray-400">Projects</div>
                 </div>
 
                 <div>
                   <div className="text-2xl font-bold">12</div>
-                  <div className="text-xs text-gray-400">
-                    Awards
-                  </div>
+                  <div className="text-xs text-gray-400">Awards</div>
                 </div>
               </div>
             </section>
           </div>
         </div>
       </main>
-
-
     </div>
   );
 }

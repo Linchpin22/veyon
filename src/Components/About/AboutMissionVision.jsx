@@ -4,7 +4,7 @@ import {
 } from "react-icons/fi";
 export default function AboutMissionVision() {
   return (
-      <section className="py-24 px-6">
+      <section id="vision" className="py-24 px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
             <div className="bg-[#131313] p-12 rounded-xl">
               <FiPocket className="text-[#e3f700] text-4xl mb-6" />

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Cta() {
   return (
  <section className="py-32 px-6">
@@ -11,9 +13,9 @@ export default function Cta() {
               leaders who chose the Luminous Monolith.
             </p>
 
-            <button className="bg-black text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform">
+            <Link href="/pricing" className="bg-black text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform">
               Start Your Project
-            </button>
+            </Link>
           </div>
         </section>
       )}

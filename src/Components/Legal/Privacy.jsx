@@ -30,8 +30,8 @@ export default function Privacy() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Introduction</h2>
             <p className="text-gray-400 mb-4">
-              At Pixora, we respect your privacy and are committed to protecting
-              your personal information.
+              At BlackGiraffe, we respect your privacy and are committed to
+              protecting your personal information.
             </p>
             <p className="text-gray-400">
               This Privacy Policy explains how we collect, use, and protect your
@@ -57,9 +57,7 @@ export default function Privacy() {
 
           {/* Usage */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">
-              How We Use Your Data
-            </h2>
+            <h2 className="text-3xl font-bold mb-6">How We Use Your Data</h2>
 
             <ul className="space-y-4 text-gray-400">
               <li>• To provide and improve our services</li>
@@ -108,7 +106,7 @@ export default function Privacy() {
             </p>
 
             <a
-              href="mailto:privacy@pixora.com"
+              href="mailto:privacy@BlackGiraffe.com"
               className="bg-black text-white px-10 py-4 rounded-xl font-bold"
             >
               Contact Privacy Team
@@ -116,7 +114,6 @@ export default function Privacy() {
           </div>
         </section>
       </main>
-
     </div>
   );
 }

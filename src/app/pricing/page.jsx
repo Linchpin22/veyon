@@ -1,11 +1,50 @@
-"use client";
 import { FiCheck, FiMessageCircle } from "react-icons/fi";
+export const metadata = {
+  title: "Pricing | BlackGiraffe",
+  description:
+    "Check out BlackGiraffe's pricing plans for high-end digital products and services tailored to your needs.",
 
+  alternates: {
+    canonical: "https://blackgiraffe.in/pricing",
+  },
+
+  openGraph: {
+    title: "Pricing | BlackGiraffe",
+    description:
+      "Check out BlackGiraffe's pricing plans for high-end digital products and services tailored to your needs.",
+    url: "https://blackgiraffe.in/pricing",
+    type: "website",
+    siteName: "BlackGiraffe",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "BlackGiraffe",
+      },
+    ],
+  },
+
+  icons: {
+    icon: [
+      { url: "/blackgiraffe.png", sizes: "32x32", type: "image/png" },
+      { url: "/blackgiraffe.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
 export default function PricingPage() {
   return (
     <div className="bg-[#0e0e0e] text-white">
- 
-
       <main className="pt-32">
         {/* Hero */}
         <section className="max-w-7xl mx-auto px-6 py-24 text-center">
@@ -25,13 +64,9 @@ export default function PricingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Starter */}
             <div className="bg-[#131313] rounded-xl p-8 flex flex-col border border-white/10">
-              <h3 className="text-gray-400 text-sm uppercase mb-2">
-                Starter
-              </h3>
+              <h3 className="text-gray-400 text-sm uppercase mb-2">Starter</h3>
 
-              <div className="text-4xl font-extrabold mb-6">
-                ₹1,25,000
-              </div>
+              <div className="text-4xl font-extrabold mb-6">₹1,25,000</div>
 
               <ul className="space-y-4 mb-12 flex-grow text-gray-400">
                 {[
@@ -58,13 +93,9 @@ export default function PricingPage() {
                 POPULAR
               </div>
 
-              <h3 className="text-[#e3f700] text-sm uppercase mb-2">
-                Pro
-              </h3>
+              <h3 className="text-[#e3f700] text-sm uppercase mb-2">Pro</h3>
 
-              <div className="text-5xl font-extrabold mb-6">
-                ₹4,15,000
-              </div>
+              <div className="text-5xl font-extrabold mb-6">₹4,15,000</div>
 
               <ul className="space-y-4 mb-12 flex-grow">
                 {[
@@ -92,9 +123,7 @@ export default function PricingPage() {
                 Enterprise
               </h3>
 
-              <div className="text-4xl font-extrabold mb-6">
-                Custom
-              </div>
+              <div className="text-4xl font-extrabold mb-6">Custom</div>
 
               <ul className="space-y-4 mb-12 flex-grow text-gray-400">
                 {[
@@ -182,7 +211,6 @@ export default function PricingPage() {
           </div>
         </section>
       </main>
-
     </div>
   );
 }

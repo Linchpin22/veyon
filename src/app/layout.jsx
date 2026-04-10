@@ -1,49 +1,47 @@
-import HeaderComp from '@/Components/Layout/HeaderComp';
-import './global.css'
-import { Poppins } from 'next/font/google';
-import FloatingComp from '@/Components/Layout/FloatingComp';
-import FooterComp from '@/Components/Layout/FooterComp';
-
+import HeaderComp from "@/Components/Layout/HeaderComp";
+import "./global.css";
+import { Poppins } from "next/font/google";
+import FloatingComp from "@/Components/Layout/FloatingComp";
+import FooterComp from "@/Components/Layout/FooterComp";
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
 });
 
 export const metadata = {
-  title: 'BlackGiraffe',
+  title: "BlackGiraffe",
   description:
-    'A social media analytics tool that provides insights into brand performance and audience engagement.',
+    "BlackGiraffe is a boutique digital studio specializing in crafting high-end digital products that blend architectural precision with creative soul.",
 
   alternates: {
-    canonical: '#',
+    canonical: "https://blackgiraffe.in",
   },
 
   openGraph: {
-    title: 'BlackGiraffe',
+    title: "BlackGiraffe",
     description:
-      'A social media analytics tool that provides insights into brand performance and audience engagement.',
-    url: '#',
-    type: 'website',
-    siteName: 'BlackGiraffe',
+      "BlackGiraffe is a boutique digital studio specializing in crafting high-end digital products that blend architectural precision with creative soul.",
+    url: "https://blackgiraffe.in",
+    type: "website",
+    siteName: "BlackGiraffe",
     images: [
       {
-        url: '/og.png',
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: 'BlackGiraffe',
+        alt: "BlackGiraffe",
       },
     ],
   },
 
-
   icons: {
     icon: [
-      { url: '/blackgiraffe.png', sizes: '32x32', type: 'image/png' },
-      { url: '/blackgiraffe.png', sizes: '16x16', type: 'image/png' },
+      { url: "/brandbuzz.png", sizes: "32x32", type: "image/png" },
+      { url: "/brandbuzz.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: "/apple-touch-icon.png",
   },
 
   robots: {
@@ -60,10 +58,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body className="font-sans">
-        <HeaderComp/>
-        <FloatingComp/>
+        <HeaderComp />
+        <FloatingComp />
         {children}
-        <FooterComp/>
+        <FooterComp />
       </body>
     </html>
   );

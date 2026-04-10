@@ -1,16 +1,18 @@
+import { Constant } from "@/Data/Constant";
 import { FiArrowRight, FiMessageCircle } from "react-icons/fi";
+import { formatPhone } from "../../../public/js/helpers";
 
 export default function Contact() {
   return (
     <div className="bg-[#0e0e0e] text-white">
-      <main className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <main className="pt-24 md:pt-32 pb-16 md:pb-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         {/* Hero */}
-        <header className="mb-20">
-          <h1 className="text-6xl md:text-8xl font-black mb-6">
+        <header className="mb-12 md:mb-20">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-4 md:mb-6 leading-tight">
             Initiate <span className="text-[#e3f700]">Contact</span>.
           </h1>
 
-          <p className="text-gray-400 text-xl max-w-2xl">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl">
             Ready to architect your digital product? Our team is ready to help
             turn your vision into reality.
           </p>
@@ -19,87 +21,112 @@ export default function Contact() {
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Form */}
-          <section className="lg:col-span-7 bg-[#131313] p-8 md:p-12 rounded-xl">
-            <form className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-8">
+          <section className="lg:col-span-7 bg-[#131313] p-5 sm:p-6 md:p-10 rounded-xl">
+            <form className="space-y-6 md:space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   placeholder="Full Name"
-                  className="w-full bg-black border-b border-white/10 p-4"
+                  className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
                 />
                 <input
                   placeholder="Email Address"
-                  className="w-full bg-black border-b border-white/10 p-4"
+                  className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
                 />
               </div>
 
               <input
                 placeholder="Phone Number"
-                className="w-full bg-black border-b border-white/10 p-4"
+                className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
               />
 
               <textarea
                 placeholder="Your Project Brief"
                 rows="4"
-                className="w-full bg-black border-b border-white/10 p-4"
+                className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
               />
 
-              <div className="flex gap-4">
-                <button className="bg-white text-black px-8 py-4 rounded-xl font-bold flex items-center gap-2">
+              {/* Buttons */}
+              <div className="flex flex-col md:flex-row gap-4">
+                <button className="w-full sm:w-auto justify-center bg-white text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-[1.02] transition">
                   Send Message <FiArrowRight />
                 </button>
 
-                <button className="bg-[#e3f700] text-black px-8 py-4 rounded-xl font-bold flex items-center gap-2">
+                <a
+                  href={`https://wa.me/${Constant.Company.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto justify-center bg-[#e3f700] text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-[1.02] transition"
+                >
                   WhatsApp <FiMessageCircle />
-                </button>
+                </a>
               </div>
             </form>
           </section>
 
           {/* Info */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <section className="bg-[#262626] p-8 rounded-xl">
-              <h3 className="text-[#e3f700] text-sm uppercase mb-8">
+            <section className="bg-[#262626] p-5 sm:p-6 md:p-8 rounded-xl">
+              <h3 className="text-[#e3f700] text-xs md:text-sm uppercase mb-6 md:mb-8">
                 Contact Info
               </h3>
 
-              <div className="space-y-6 text-gray-400">
+              <div className="space-y-5 md:space-y-6 text-gray-400 text-sm md:text-base">
                 <div>
                   <p className="text-white font-bold">Office</p>
-                  <p>22 Bishopsgate, London</p>
+                  <p>Kanpur, INDIA</p>
                 </div>
 
                 <div>
                   <p className="text-white font-bold">Email</p>
-                  <p>hello@BlackGiraffe.digital</p>
+                  <a
+                    href={`mailto:${Constant.Company.email}`}
+                    className="text-gray-400 hover:text-[#e3f700] transition-all duration-300 relative group inline-block"
+                  >
+                    {Constant.Company.email}
+                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#e3f700] transition-all duration-300 group-hover:w-full"></span>
+                  </a>
                 </div>
-
                 <div>
                   <p className="text-white font-bold">Phone</p>
-                  <p>+44 20 7946 0123</p>
+                  <a
+                    href={`tel:${Constant.Company.phones[0]}`}
+                    className="text-gray-400 hover:text-[#e3f700] transition-all duration-300 relative group inline-block"
+                  >
+                    {formatPhone(Constant.Company.phones[0])}
+                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#e3f700] transition-all duration-300 group-hover:w-full"></span>
+                  </a>
                 </div>
               </div>
             </section>
 
-            <section className="bg-[#131313] p-8 rounded-xl">
-              <h3 className="text-xl font-bold mb-4">Company Stats</h3>
+            {/* <section className="bg-[#131313] p-5 sm:p-6 md:p-8 rounded-xl">
+              <h3 className="text-lg md:text-xl font-bold mb-4">
+                Company Stats
+              </h3>
 
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold">98%</div>
-                  <div className="text-xs text-gray-400">Retention</div>
+                  <div className="text-xl md:text-2xl font-bold">98%</div>
+                  <div className="text-[10px] md:text-xs text-gray-400">
+                    Retention
+                  </div>
                 </div>
 
                 <div>
-                  <div className="text-2xl font-bold">150+</div>
-                  <div className="text-xs text-gray-400">Projects</div>
+                  <div className="text-xl md:text-2xl font-bold">150+</div>
+                  <div className="text-[10px] md:text-xs text-gray-400">
+                    Projects
+                  </div>
                 </div>
 
                 <div>
-                  <div className="text-2xl font-bold">12</div>
-                  <div className="text-xs text-gray-400">Awards</div>
+                  <div className="text-xl md:text-2xl font-bold">12</div>
+                  <div className="text-[10px] md:text-xs text-gray-400">
+                    Awards
+                  </div>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </div>
       </main>

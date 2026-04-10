@@ -13,9 +13,9 @@ import {
 
 const navLinks = [
   { href: "/", label: "Home", icon: FiHome },
-  { href: "/about", label: "About", icon: FiInfo },
+   { href: "/services", label: "Our Services", icon: FiLayers },
   { href: "/portfolio", label: "Portfolio", icon: FiBriefcase },
-  { href: "/services", label: "What We Offer", icon: FiLayers },
+ { href: "/about", label: "About", icon: FiInfo },
   { href: "/contact", label: "Contact", icon: FiMail },
 ];
 

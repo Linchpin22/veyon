@@ -13,9 +13,19 @@ export default function Cta() {
               leaders who chose the Luminous Monolith.
             </p>
 
-            <Link href="/pricing" className="bg-black text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform">
-              Start Your Project
-            </Link>
+           <Link
+  href="/pricing"
+  className="inline-flex items-center justify-center 
+             bg-black text-white 
+             px-6 sm:px-8 md:px-10 
+             py-3 sm:py-4 md:py-5 
+             text-sm sm:text-lg md:text-xl 
+             rounded-full font-bold 
+             w-full sm:w-auto 
+             hover:scale-105 transition-transform"
+>
+  Start Your Project
+</Link>
           </div>
         </section>
       )}

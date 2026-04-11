@@ -25,11 +25,6 @@ export default function ServicesComp() {
       icon: <FaCode />,
     },
     {
-      title: "School Website Development",
-      desc: "Complete school websites with admission enquiry system.",
-      icon: <FaSchool />,
-    },
-    {
       title: "Digital Branding",
       desc: "Logo design, brand colors and complete digital identity.",
       icon: <FaCertificate />,

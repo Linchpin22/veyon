@@ -1,8 +1,37 @@
+"use client";
 import { Constant } from "@/Data/Constant";
 import { FiArrowRight, FiMessageCircle } from "react-icons/fi";
 import { formatPhone } from "../../../public/js/helpers";
+import toast from "react-hot-toast";
 
 export default function Contact() {
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        message: formData.get("message"),
+      }),
+    });
+
+    if (!res.ok) throw new Error();
+
+    toast.success("Your query has been sent ✅");
+    e.target.reset();
+  } catch (error) {
+    toast.error("There was a problem. Try again ❌");
+  }
+};
   return (
     <div className="bg-[#0e0e0e] text-white">
       <main className="pt-24 md:pt-32 pb-16 md:pb-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
@@ -22,24 +51,27 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Form */}
           <section className="lg:col-span-7 bg-[#131313] p-5 sm:p-6 md:p-10 rounded-xl">
-            <form className="space-y-6 md:space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  placeholder="Full Name"
-                  className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
-                />
-                <input
-                  placeholder="Email Address"
-                  className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
-                />
-              </div>
+            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+              <input
+                name="name"
+                placeholder="Full Name"
+                className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
+              />
 
               <input
+                name="email"
+                placeholder="Email Address"
+                className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
+              />
+
+              <input
+                name="phone"
                 placeholder="Phone Number"
                 className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
               />
 
               <textarea
+                name="message"
                 placeholder="Your Project Brief"
                 rows="4"
                 className="w-full bg-black border-b border-white/10 p-3 md:p-4 text-sm md:text-base focus:outline-none focus:border-[#e3f700]"
@@ -47,7 +79,10 @@ export default function Contact() {
 
               {/* Buttons */}
               <div className="flex flex-col md:flex-row gap-4">
-                <button className="w-full sm:w-auto justify-center bg-white text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-[1.02] transition">
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto justify-center bg-white text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-[1.02] transition"
+                >
                   Send Message <FiArrowRight />
                 </button>
 

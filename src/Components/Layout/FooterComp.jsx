@@ -29,7 +29,7 @@ export default function FooterComp() {
           <div className="sm:col-span-2 lg:col-span-1 space-y-7">
             <div className="flex flex-col gap-3">
               <div className="text-3xl sm:text-4xl font-black text-[#ffd700] tracking-tighter">
-                BlackGiraffe
+                Black<span className="text-white">Giraffe</span>
               </div>
               <p className="font-bold text-yellow-400 tracking-tight text-lg sm:text-xl">
                 We work like bees for your brand.
@@ -91,11 +91,11 @@ export default function FooterComp() {
             <ul className="space-y-3 text-xs sm:text-sm uppercase tracking-widest">
               {[
                 { name: "Home", href: "/" },
-                { name: "About", href: "/about" },
+                { name: "Our Services", href: "/services" },
                 { name: "Portfolio", href: "/portfolio" },
-                { name: "Pricing", href: "/pricing" },
-                { name: "What We Offer", href: "/services" },
+                { name: "About", href: "/about" },
                 { name: "Contact", href: "/contact" },
+                 { name: "Pricing", href: "/pricing" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link

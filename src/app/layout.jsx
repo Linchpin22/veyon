@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import FloatingComp from "@/Components/Layout/FloatingComp";
 import FooterComp from "@/Components/Layout/FooterComp";
 import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,7 +23,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body className="font-sans">
-
         {/* ✅ Google Analytics Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-336C6NSBFK"
@@ -41,6 +41,16 @@ export default function RootLayout({ children }) {
         <HeaderComp />
         <FloatingComp />
         {children}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: "#131313",
+              color: "#fff",
+              border: "1px solid #e3f700",
+            },
+          }}
+        />
         <FooterComp />
       </body>
     </html>

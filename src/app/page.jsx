@@ -31,8 +31,8 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: "/brandbuzz.png", sizes: "32x32", type: "image/png" },
-      { url: "/brandbuzz.png", sizes: "16x16", type: "image/png" },
+      { url: "/fav32.png", sizes: "32x32", type: "image/png" },
+      { url: "/fav16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: "/apple-touch-icon.png",
   },
